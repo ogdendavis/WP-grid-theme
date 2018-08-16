@@ -28,9 +28,10 @@
 
 .grid-container {
   margin: auto;
-  min-width: 300px;
-  max-width: 900px;
-  padding: 20px;
+  min-width: 350px;
+  max-width: 950px;
+  overflow: auto; /* To fix issue of container div having no height */
+  padding: 25px;
 }
 
 /* Clear fix */
@@ -44,13 +45,20 @@
   clear: both;
 }
 
+/* Grid properties for the card itself */
+.card {
+  margin: auto;
+  width: 250px;
+}
+
 /* Default: phones/devices under 640px */
 
 .col {
   float: left;
   margin: 0;
   padding: 25px;
-  width: 100%;
+  text-align: center;
+  min-width: 300px;
 }
 
 /* Bigger phones in landscape, and tablets */

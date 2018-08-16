@@ -20,12 +20,12 @@
 
 }
 
-.card {
+.card { /* Only place display properties here. Grid/size are in grid.css */
 
 }
 
 .card__pic {
-  width: 250px;
+  width: 100%;
 }
 
 .caption {
