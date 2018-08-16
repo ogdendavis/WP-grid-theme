@@ -16,12 +16,16 @@
 
 /* Cards */
 
+.card-stack {
+
+}
+
 .card {
 
 }
 
 .card__pic {
-
+  width: 250px;
 }
 
 .caption {

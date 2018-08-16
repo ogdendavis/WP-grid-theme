@@ -1,0 +1,71 @@
+/* Using float:left grid, in style practiced in earlier exercise. Am attempting
+ * to do so without peeking at previous implementation.
+ */
+
+/* Assignment is to implement a grid system that switches between 2 rows of 3
+ * for desktop and single-column for mobile. I'd like to add a third state that
+ * displays 3 rows of 2 in a mobile device in landscape orientation or a tablet.
+ */
+
+/* Since I want to have breakpoints such that each item can be on its own, with
+ * a pair, or part of a triplet, rows are basically useless. I'm keeping the
+ * .col syntax because that makes sense to me, but each item is basically a
+ * column and a row of its own, so the typical float settings for a responsive
+ * design are contained in .col::before and .col::after, instead of the
+ * equivalent row pseudo-elements.
+ */
+
+ html {
+   box-sizing: border-box;
+ }
+
+ *, *::before, *::after {
+   box-sizing: inherit;
+ }
+
+/* Grid-container houses some of the functionality of a row, while the rest is
+ * absorbed into the .col class */
+
+.grid-container {
+  margin: auto;
+  min-width: 300px;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* Clear fix */
+
+.col::before, .col::after {
+  content: '';
+  display: table;
+}
+
+.col::after {
+  clear: both;
+}
+
+/* Default: phones/devices under 640px */
+
+.col {
+  float: left;
+  margin: 0;
+  padding: 25px;
+  width: 100%;
+}
+
+/* Bigger phones in landscape, and tablets */
+
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .col {
+    width: 50%;
+  }
+}
+
+/* Desktop/laptop, and bigger tablets in landscape */
+
+@media only screen and (min-width: 1024px) {
+  .col {
+    width: 33.333333%;
+    width: calc(100% / 3);
+  }
+}
