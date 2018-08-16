@@ -1,17 +1,34 @@
 /* Using BEM naming */
 
+/* Global */
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
 /* Header */
+/* A good number of these are to offset positioning behaviors inherited from
+ * .col and .grid-container, which were added to align the page title with the
+ * cards, as indicated on the design */
 
 .header {
-
+  background-color: #f0c32e;
+  overflow: auto; /* Eliminates white space above header */
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
 }
 
 .header__title {
-
+  margin-bottom: 8px;
+  width: 100%;
 }
 
 .header__subtitle {
-
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 0;
+  width: 100%;
 }
 
 /* Cards */
