@@ -1,7 +1,3 @@
-/* Using float:left grid, in style practiced in earlier exercise. Am attempting
- * to do so without peeking at previous implementation.
- */
-
 /* Assignment is to implement a grid system that switches between 2 rows of 3
  * for desktop and single-column for mobile. I'd like to add a third state that
  * displays 3 rows of 2 in a mobile device in landscape orientation or a tablet.
@@ -10,9 +6,7 @@
 /* Since I want to have breakpoints such that each item can be on its own, with
  * a pair, or part of a triplet, rows are basically useless. I'm keeping the
  * .col syntax because that makes sense to me, but each item is basically a
- * column and a row of its own, so the typical float settings for a responsive
- * design are contained in .col::before and .col::after, instead of the
- * equivalent row pseudo-elements.
+ * column and a row of its own, so the Clearfix is therefore not needed.
  */
 
  html {
@@ -24,7 +18,7 @@
  }
 
 /* Grid-container houses some of the functionality of a row, while the rest is
- * absorbed into the .col class */
+ * absorbed into the .col class sizing */
 
 .grid-container {
   margin: auto;
@@ -39,9 +33,7 @@
   padding-bottom: 0;
 }
 
-/* Grid properties for the card itself */
-.card {
-  margin: auto;
+.card { /* Only grid properties here. Display properties in main.css */
   width: 325px;
 }
 
@@ -75,6 +67,3 @@
     width: calc(100% / 3);
   }
 }
-
-
-/* FIX: When screen minimzed to width less than width of one column, the extra divs on the header stack down and create more space. Make it consistent height the whole time! Can fix with a forced height on the header, but make sure it doesn't break anything else!*/

@@ -33,12 +33,9 @@ body {
 
 /* Cards */
 
-.card-stack {
-
-}
-
 .card { /* Only place display properties here. Grid/size are in grid.css */
-
+  border: 1px solid #e4e4e4;
+  margin: auto;
 }
 
 .card__pic {
@@ -46,13 +43,15 @@ body {
 }
 
 .caption {
-
+  margin: 24px 16px;
 }
 
 .caption__name {
-
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .caption__detail {
-
+  font-size: 14px;
+  margin-top: 8px;
 }
