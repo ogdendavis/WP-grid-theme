@@ -34,15 +34,9 @@
   padding: 25px;
 }
 
-/* Clear fix */
-
-.col::before, .col::after {
-  content: '';
-  display: table;
-}
-
-.col::after {
-  clear: both;
+.grid-container--header {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Grid properties for the card itself */
@@ -53,11 +47,16 @@
 
 /* Default: phones/devices under 640px */
 
-.col {
+.col, .col-3 {
   float: left;
   margin: 0;
   padding: 25px;
   min-width: 375px;
+}
+
+.col--header {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Bigger phones in landscape, and tablets */
@@ -70,9 +69,12 @@
 
 /* Desktop/laptop, and bigger tablets in landscape */
 
-@media only screen and (min-width: 1175px) {
+@media only screen and (min-width: 1176px) {
   .col {
     width: 33.333333%;
     width: calc(100% / 3);
   }
 }
+
+
+/* FIX: When screen minimzed to width less than width of one column, the extra divs on the header stack down and create more space. Make it consistent height the whole time! Can fix with a forced height on the header, but make sure it doesn't break anything else!*/
