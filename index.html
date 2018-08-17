@@ -21,8 +21,8 @@
 
 <body>
   <header role="banner" class="header">
-    <div class="grid-container grid-container--header">
-      <div class="col-3 col--header">
+    <div class="row row--header">
+      <div class="col-12 col--header">
         <h1 class="header__title">Star Wars Characters</h1>
         <h2 class="header__subtitle">Incomplete list</h2>
       </div>
@@ -30,11 +30,11 @@
   </header>
 
   <main role="main">
-    <div class="card-stack grid-container">
+    <div class="row">
       <!-- Classes card-stack and grid-container are both just on this DIV, but
            are different classes to separate concerns of grid functionality
            (grid-container) and display (card-stack). -->
-      <div class="col">
+      <div class="col-4">
         <figure class="card">
           <!-- Like card-stack and grid-container above, card is for display and
                col is for grid. -->
@@ -46,7 +46,7 @@
         </figure>
       </div>
 
-      <div class="col">
+      <div class="col-4">
         <figure class="card">
           <img src="images/finn_square.png" class="card__pic" alt="Finn" width="250">
           <figcaption class="caption">
@@ -56,7 +56,7 @@
         </figure>
       </div>
 
-      <div class="col">
+      <div class="col-4">
         <figure class="card">
           <img src="images/kylo_square.png" class="card__pic" alt="Kylo Ren" width="250">
           <figcaption class="caption">
@@ -65,8 +65,10 @@
           </figcaption>
         </figure>
       </div>
+    </div>
 
-      <div class="col">
+    <div class="row">
+      <div class="col-4">
         <figure class="card">
           <img src="images/poe_square.png" class="card__pic" alt="Poe" width="250">
           <figcaption class="caption">
@@ -76,7 +78,7 @@
         </figure>
       </div>
 
-      <div class="col">
+      <div class="col-4">
         <figure class="card">
           <img src="images/chewbacca_square.png" class="card__pic" alt="Chewbacca" width="250">
           <figcaption class="caption">
@@ -86,7 +88,7 @@
         </figure>
       </div>
 
-      <div class="col">
+      <div class="col-4">
         <figure class="card">
           <img src="images/yoda_square.png" class="card__pic" alt="Yoda" width="250">
           <figcaption class="caption">
