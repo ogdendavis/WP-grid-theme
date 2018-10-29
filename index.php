@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Star Wars Responsive Challenge</title>
+  <title>Tricycle Grid</title>
 
   <!-- Responsive viewport tag, tells small screens that it's responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,8 @@
   <header role="banner" class="header">
     <div class="row row--header">
       <div class="col-12 col--header">
-        <h1 class="header__title">Star Wars Characters</h1>
-        <h2 class="header__subtitle">Incomplete list</h2>
+        <h1 class="header__title">Tricycle Grid</h1>
+        <h2 class="header__subtitle">A responsive grid theme for WordPress</h2>
       </div>
     </div>
   </header>
