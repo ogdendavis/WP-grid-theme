@@ -7,16 +7,13 @@
   <!-- Responsive viewport tag, tells small screens that it's responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Normalize.css, a cross-browser reset file -->
-  <!-- Changed from remote link to link within the project -->
-  <link href="normalize.css" type="text/css" rel="stylesheet">
-
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
-  <!-- Stylesheets -->
-  <link href="grid.css" type="text/css" rel="stylesheet">
-  <link href="main.css" type="text/css" rel="stylesheet">
+  <!-- load stylesheets -->
+  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/css/grid.css" />
 </head>
 
 <body>
